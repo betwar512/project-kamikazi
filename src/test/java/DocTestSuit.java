@@ -80,9 +80,7 @@ public class DocTestSuit {
         textRun.setFontSize(14);
         textRun.setText(text);
         textRun.addBreak();
-
-
-
+        textRun.addBreak();
 
     }
 
@@ -101,22 +99,33 @@ public class DocTestSuit {
             policy = new  XWPFHeaderFooterPolicy( document, sectPr );
         }
         if (policy.getDefaultHeader() == null && policy.getFirstPageHeader() == null
+
                 && policy.getDefaultFooter() == null) {
             // Need to create some new headers
             // The easy way, gives a single empty paragraph
             XWPFHeader headerD = policy.createHeader(XWPFHeaderFooterPolicy.DEFAULT);
+
             List<XWPFParagraph> listPr = headerD.getParagraphs();
 
 
             if(listPr.isEmpty()){
+
                 XWPFParagraph paragraph = headerD.createParagraph();
+
                 paragraph.setAlignment(ParagraphAlignment.CENTER);
+
                 XWPFRun runTitle = paragraph.createRun();
+
                 runTitle.setFontSize(25);
+
                 runTitle.setBold(true);
+
                 runTitle.setColor("6aa3c1");
+
                 runTitle.setText(documentTitle);
+
                 runTitle.addBreak();
+
                 runTitle.addBreak();
 
             } else {
