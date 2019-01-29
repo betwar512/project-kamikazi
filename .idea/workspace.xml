@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dea1675e-c5af-40e5-987b-890279320b2f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docfiles/create_table.docx" beforeDir="false" afterPath="$PROJECT_DIR$/docfiles/create_table.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docfiles/~$eate_table.docx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/test/classes/DocTestSuit.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/DocTestSuit.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/DocTestSuit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DocTestSuit.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -36,14 +32,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/DocTestSuit.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="121" column="20" lean-forward="true" selection-start-line="121" selection-start-column="20" selection-end-line="121" selection-end-column="20" />
+            <state relative-caret-position="347">
+              <caret line="172" lean-forward="true" selection-start-line="172" selection-end-line="172" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
@@ -66,6 +71,8 @@
         <option value="$APPLICATION_CONFIG_DIR$/idea.properties" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/test/java/DocTestSuit.java" />
+        <option value="$PROJECT_DIR$/docfiles/.gitignore" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -86,11 +93,6 @@
             <path>
               <item name="kamikazi" type="b2602c69:ProjectViewProjectNode" />
               <item name="kamikazi" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="kamikazi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kamikazi" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="docfiles" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="kamikazi" type="b2602c69:ProjectViewProjectNode" />
@@ -153,12 +155,17 @@
       <option name="presentableId" value="Default" />
       <updated>1548757336613</updated>
     </task>
+    <task id="LOCAL-00001" summary="some clean up line brekas">
+      <created>1548770702838</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1548770702838</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="DocTestSuit_createDocWithTable - 2019.01.29 at 23h 22m 34s.xml">
-      <configuration name="DocTestSuit.createDocWithTable" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="DocTestSuit_createDocWithTable - 2019.01.29 at 23h 31m 04s.xml">
       <configuration name="DocTestSuit.createDocWithTable" configurationId="JUnit" />
     </history-entry>
@@ -186,12 +193,15 @@
     <history-entry file="DocTestSuit_createDocWithTable - 2019.01.29 at 23h 48m 15s.xml">
       <configuration name="DocTestSuit.createDocWithTable" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="DocTestSuit_createDocWithTable - 2019.01.30 at 00h 04m 27s.xml">
+      <configuration name="DocTestSuit.createDocWithTable" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="836" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2532189" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2532189" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -199,13 +209,13 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3293011" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.31317204" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.55510753" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3293011" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32795697" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="9" visible="true" weight="0.3293011" />
       <window_info anchor="bottom" id="Build" order="10" weight="0.3293011" />
       <window_info anchor="bottom" id="Messages" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -216,6 +226,10 @@
       <window_info anchor="right" id="Gradle" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
     </layout>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="some clean up line brekas" />
+    <option name="LAST_COMMIT_MESSAGE" value="some clean up line brekas" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$APPLICATION_CONFIG_DIR$/idea.properties">
@@ -248,11 +262,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/DocTestSuit.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="121" column="20" lean-forward="true" selection-start-line="121" selection-start-column="20" selection-end-line="121" selection-end-column="20" />
+        <state relative-caret-position="347">
+          <caret line="172" lean-forward="true" selection-start-line="172" selection-end-line="172" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
