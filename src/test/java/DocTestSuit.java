@@ -1,52 +1,135 @@
-import org.apache.poi.xwpf.usermodel.XWPFDocument;
-import org.apache.poi.xwpf.usermodel.XWPFTable;
-import org.apache.poi.xwpf.usermodel.XWPFTableRow;
+import org.apache.poi.xwpf.usermodel.*;
 import org.junit.Test;
+
+
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.math.BigDecimal;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * @author A.H.Safaie
  */
 public class DocTestSuit {
 
-    public static final String FILE_PATH = "";
+    public static final String FILE_PATH = "docfiles/";
+
+    XWPFDocument document;
+
 
     @Test public void createDocWithTable() throws IOException {
 
         //Blank Document
-        XWPFDocument document = new XWPFDocument();
-
-        //Write the Document in file system
-        FileOutputStream out = new FileOutputStream(new File("create_table.docx"));
+         document = new XWPFDocument();
+        FileOutputStream out = new FileOutputStream(new File(FILE_PATH + "create_table.docx"));
+        // create paragraph
+        createNewPragraph("This is title ","someone somewhere bla bla bla bla ");
 
         //create table
         XWPFTable table = document.createTable();
 
-        //create first row
-        XWPFTableRow tableRowOne = table.getRow(0);
-        tableRowOne.getCell(0).setText("col one, row one");
-        tableRowOne.addNewTableCell().setText("col two, row one");
-        tableRowOne.addNewTableCell().setText("col three, row one");
 
-        //create second row
-        XWPFTableRow tableRowTwo = table.createRow();
-        tableRowTwo.getCell(0).setText("col one, row two");
-        tableRowTwo.getCell(1).setText("col two, row two");
-        tableRowTwo.getCell(2).setText("col three, row two");
+        addHeadersToTable(table,Arrays.asList("Header One","Header Two","Header three"));
+        List<List<Object>> listArrays = Arrays.asList(
+                Arrays.asList("col one, row one","col two, row one", BigDecimal.valueOf(10)),
+                Arrays.asList("col one, row two","col two, row two","col three, row two"),
+                Arrays.asList("col one, row three","col two, row three","col three, row three")
+        );
 
-        //create third row
-        XWPFTableRow tableRowThree = table.createRow();
-        tableRowThree.getCell(0).setText("col one, row three");
-        tableRowThree.getCell(1).setText("col two, row three");
-        tableRowThree.getCell(2).setText("col three, row three");
+        for (int i = 0; i < listArrays.size(); i++) {
+
+            addRow(table.createRow(),listArrays.get(i));
+        }
+
 
         document.write(out);
         out.close();
         System.out.println("create_table.docx written successully");
+    }
 
+    void createNewPragraph(String title , String text){
+        //TODO
+        XWPFParagraph paragraph = document.createParagraph();
+        //Set Bold an Italic
+        XWPFRun titleRun = paragraph.createRun();
+        titleRun.setFontSize(20);
+        titleRun.setBold(true);
+        titleRun.setText(title);
+        titleRun.addBreak();
+
+        //Set text Position
+        XWPFRun textRun = paragraph.createRun();
+        textRun.setFontSize(16);
+        textRun.setText(text);
+
+    }
+
+    /**
+     *
+     * @param table
+     * @param listStrs
+     */
+    void addHeadersToTable(XWPFTable table ,List<Object> listStrs){
+
+        XWPFTableRow headerRow = table.getRow(0);
+        for (int i = 0; i < listStrs.size(); i++) {
+
+            Object o = listStrs.get(i);
+
+            String strValue ;
+
+            if( o instanceof String ){
+
+                strValue = (String) o;
+
+            } else {
+
+                strValue = o.toString();
+
+            }
+            XWPFTableCell cel;
+
+            if(i==0){
+                 cel = headerRow.getCell(0);
+            } else
+                 cel = headerRow.addNewTableCell();
+
+           // cel.setColor("");
+
+            cel.setText(strValue);
+        }
+
+
+    }
+
+    /**
+     *  Create cell
+     * @param tableRow
+     * @param listStrs
+     */
+    private void addRow(XWPFTableRow tableRow, List<Object> listStrs){
+
+        for (int i = 0; i < listStrs.size(); i++) {
+
+            Object o = listStrs.get(i);
+
+            String strValue ;
+
+            if( o instanceof String ){
+
+                 strValue = (String) o;
+
+            } else {
+
+                strValue = o.toString();
+
+            }
+
+            tableRow.getCell(i).setText(strValue);
+        }
     }
 
 }
