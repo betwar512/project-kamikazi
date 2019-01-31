@@ -249,6 +249,7 @@ public class DocTestSuit {
             tcpr.addNewShd().setFill(toHexString(Color.LIGHT_GRAY));
 
             XWPFParagraph pr = cel.getParagraphs().isEmpty()? cel.addParagraph() :  cel.getParagraphs().get(0);
+
             pr.setAlignment(ParagraphAlignment.CENTER);
             setRun(pr.createRun(),"",0,"",strValue.toUpperCase(),true,false);
             //  cel.setText(strValue.toUpperCase());
