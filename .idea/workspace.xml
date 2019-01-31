@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dea1675e-c5af-40e5-987b-890279320b2f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/kamikazi/filewriters/DocXWriter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docfiles/create_table.docx" beforeDir="false" afterPath="$PROJECT_DIR$/docfiles/create_table.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docfiles/~$eate_table.docx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/test/classes/DocTestSuit.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/DocTestSuit.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/DocTestSuit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DocTestSuit.java" afterDir="false" />
     </list>
@@ -53,13 +51,23 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="gradle" value="1" />
-          <entry key="java" value="511" />
+          <entry key="java" value="683" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Groovy" value="1" />
-          <entry key="JAVA" value="511" />
+          <entry key="JAVA" value="683" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="1" />
         </counts>
       </usages-collector>
     </session>
@@ -69,17 +77,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+            <state relative-caret-position="225">
+              <caret line="15" selection-start-line="15" selection-end-line="15" selection-end-column="72" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/DocTestSuit.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="349">
+              <caret line="29" column="95" selection-start-line="29" selection-start-column="6" selection-end-line="29" selection-end-column="95" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/DocTestSuit.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/kamikazi/filewriters/DocXWriter.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="322">
-              <caret line="192" column="57" lean-forward="true" selection-start-line="192" selection-start-column="57" selection-end-line="192" selection-end-column="57" />
+              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -483,6 +503,7 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/test/java/DocTestSuit.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/kamikazi/filewriters/DocXWriter.java" />
       </list>
     </option>
   </component>
@@ -521,6 +542,33 @@
               <item name="project-kamikazi" type="b2602c69:ProjectViewProjectNode" />
               <item name="project-kamikazi" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project-kamikazi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project-kamikazi" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="project-kamikazi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project-kamikazi" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project-kamikazi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project-kamikazi" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="filewriters" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project-kamikazi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project-kamikazi" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -577,7 +625,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1548757336613</updated>
-      <workItem from="1548807447307" duration="3935000" />
+      <workItem from="1548807447307" duration="7572000" />
     </task>
     <task id="LOCAL-00001" summary="some clean up line brekas">
       <created>1548770702838</created>
@@ -590,21 +638,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="DocTestSuit_createDocWithTable - 2019.01.30 at 16h 50m 26s.xml">
-      <configuration name="DocTestSuit.createDocWithTable" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DocTestSuit_createDocWithTable - 2019.01.30 at 16h 50m 37s.xml">
-      <configuration name="DocTestSuit.createDocWithTable" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DocTestSuit_createDocWithTable - 2019.01.30 at 16h 50m 56s.xml">
-      <configuration name="DocTestSuit.createDocWithTable" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DocTestSuit_createDocWithTable - 2019.01.30 at 16h 51m 51s.xml">
-      <configuration name="DocTestSuit.createDocWithTable" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DocTestSuit_createDocWithTable - 2019.01.30 at 16h 53m 13s.xml">
-      <configuration name="DocTestSuit.createDocWithTable" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="DocTestSuit_createDocWithTable - 2019.01.30 at 16h 53m 27s.xml">
       <configuration name="DocTestSuit.createDocWithTable" configurationId="JUnit" />
     </history-entry>
@@ -620,9 +653,24 @@
     <history-entry file="DocTestSuit_createDocWithTable - 2019.01.30 at 16h 59m 12s.xml">
       <configuration name="DocTestSuit.createDocWithTable" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="DocTestSuit_createDocWithTable - 2019.01.30 at 17h 01m 48s.xml">
+      <configuration name="DocTestSuit.createDocWithTable" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DocTestSuit_createDocWithTable - 2019.01.30 at 17h 02m 24s.xml">
+      <configuration name="DocTestSuit.createDocWithTable" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DocTestSuit_createDocWithTable - 2019.01.30 at 17h 02m 53s.xml">
+      <configuration name="DocTestSuit.createDocWithTable" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DocTestSuit_createDocWithTable - 2019.01.30 at 17h 03m 18s.xml">
+      <configuration name="DocTestSuit.createDocWithTable" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DocTestSuit_createDocWithTable - 2019.01.30 at 17h 30m 27s.xml">
+      <configuration name="DocTestSuit.createDocWithTable" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3935000" />
+    <option name="totallyTimeSpent" value="7572000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="2048" height="1079" extended-state="6" />
@@ -643,7 +691,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32795697" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3272543" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.13272543" />
       <window_info anchor="bottom" id="Build" order="10" weight="0.3293011" />
@@ -689,15 +737,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+        <state relative-caret-position="225">
+          <caret line="15" selection-start-line="15" selection-end-line="15" selection-end-column="72" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/DocTestSuit.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="29" column="95" selection-start-line="29" selection-start-column="6" selection-end-line="29" selection-end-column="95" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/kamikazi/filewriters/DocXWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
-          <caret line="192" column="57" lean-forward="true" selection-start-line="192" selection-start-column="57" selection-end-line="192" selection-end-column="57" />
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

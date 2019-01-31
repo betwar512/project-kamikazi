@@ -28,7 +28,7 @@ public class DocTestSuit {
         //Blank Document
          document = new XWPFDocument();
         FileOutputStream out = new FileOutputStream(new File(FILE_PATH + "create_table.docx"));
-
+     //   setPageSize();
         addDocTitle("Schedule - Wednesday, 24 January 2019");
 
         // create paragraph
@@ -64,13 +64,19 @@ public class DocTestSuit {
         System.out.println("create_table.docx written successfully");
     }
 
+    //------------------
 
     void setPageSize(){
         CTBody body = document.getDocument().getBody();
         CTSectPr section = body.getSectPr();
+        if(section == null){
+            section = body.addNewSectPr();
+            section.addNewPgSz();
+        }
         CTPageSz pageSize = section.getPgSz();
         pageSize.setW(BigInteger.valueOf(15840));
         pageSize.setH(BigInteger.valueOf(12240));
+
     }
 
     /**
@@ -100,6 +106,52 @@ public class DocTestSuit {
     }
 
 
+
+
+
+    /**
+     *
+     * @param run
+     * @param fontFamily
+     * @param fontSize
+     * @param colorRGB
+     * @param text
+     * @param bold
+     * @param addBreak
+     */
+    private  void setRun(XWPFRun run , String fontFamily , int fontSize , String colorRGB , String text , boolean bold , boolean addBreak) {
+
+        run.setFontFamily(fontFamily);
+        if(fontSize > 0)
+        run.setFontSize(fontSize);
+
+        run.setColor(colorRGB);
+
+        run.setText(text);
+
+        run.setBold(bold);
+
+        if (addBreak) run.addBreak();
+    }
+
+    /*----------------------------------------------------------------------*/
+    // table functions
+    /*----------------------------------------------------------------------*/
+
+
+    /**
+     *
+     * @param colour
+     * @return
+     * @throws NullPointerException
+     */
+      String toHexString(Color colour) throws NullPointerException {
+        String hexColour = Integer.toHexString(colour.getRGB() & 0xffffff);
+        if (hexColour.length() < 6) {
+            hexColour = "000000".substring(0, 6 - hexColour.length()) + hexColour;
+        }
+        return  hexColour;
+    }
 
     /**
      *
@@ -177,11 +229,11 @@ public class DocTestSuit {
             XWPFTableCell cel;
 
             if(i==0){
-                 cel = headerRow.getCell(0);
+                cel = headerRow.getCell(0);
             } else
-                 cel = headerRow.addNewTableCell();
+                cel = headerRow.addNewTableCell();
 
-           // cel.setColor("");
+            // cel.setColor("");
             CTTc    ctt = cel.getCTTc();
             CTTcPr tcpr = ctt.addNewTcPr();
 
@@ -197,52 +249,12 @@ public class DocTestSuit {
             tcpr.addNewShd().setFill(toHexString(Color.LIGHT_GRAY));
 
             XWPFParagraph pr = cel.getParagraphs().isEmpty()? cel.addParagraph() :  cel.getParagraphs().get(0);
-          pr.setAlignment(ParagraphAlignment.CENTER);
+            pr.setAlignment(ParagraphAlignment.CENTER);
             setRun(pr.createRun(),"",0,"",strValue.toUpperCase(),true,false);
-          //  cel.setText(strValue.toUpperCase());
+            //  cel.setText(strValue.toUpperCase());
         }
 
 
-    }
-
-    /**
-     *
-     * @param run
-     * @param fontFamily
-     * @param fontSize
-     * @param colorRGB
-     * @param text
-     * @param bold
-     * @param addBreak
-     */
-    private  void setRun(XWPFRun run , String fontFamily , int fontSize , String colorRGB , String text , boolean bold , boolean addBreak) {
-
-        run.setFontFamily(fontFamily);
-        if(fontSize > 0)
-        run.setFontSize(fontSize);
-
-        run.setColor(colorRGB);
-
-        run.setText(text);
-
-        run.setBold(bold);
-
-        if (addBreak) run.addBreak();
-    }
-
-
-    /**
-     *
-     * @param colour
-     * @return
-     * @throws NullPointerException
-     */
-      String toHexString(Color colour) throws NullPointerException {
-        String hexColour = Integer.toHexString(colour.getRGB() & 0xffffff);
-        if (hexColour.length() < 6) {
-            hexColour = "000000".substring(0, 6 - hexColour.length()) + hexColour;
-        }
-        return  hexColour;
     }
 
     /**
@@ -251,7 +263,7 @@ public class DocTestSuit {
      * @param listStrs
      */
     private void addRow(XWPFTableRow tableRow, List<Object> listStrs){
-
+        tableRow.setHeight(1440);
         for (int i = 0; i < listStrs.size(); i++) {
 
             Object o = listStrs.get(i);
@@ -271,6 +283,13 @@ public class DocTestSuit {
             XWPFParagraph pr = cel.getParagraphs().isEmpty()? cel.addParagraph() :  cel.getParagraphs().get(0);
             pr.setAlignment(ParagraphAlignment.CENTER);
            cel.setText(strValue);
+
+            CTTc    ctt = cel.getCTTc();
+            CTTcPr tcpr = ctt.addNewTcPr();
+
+            // border
+            CTTcBorders borderCe = tcpr.addNewTcBorders();
+            borderCe.addNewBottom().setVal(STBorder.SINGLE);
         }
     }
 
